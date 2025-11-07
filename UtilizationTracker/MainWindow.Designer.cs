@@ -46,6 +46,7 @@
             labelResult = new Label();
             labelTotal = new Label();
             labelGoal = new Label();
+            labelVersion = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)numInputShift).BeginInit();
             panel1.SuspendLayout();
@@ -255,11 +256,22 @@
             labelGoal.TabIndex = 9;
             labelGoal.Text = "Goal: 0.00";
             // 
+            // labelVersion
+            // 
+            labelVersion.AutoSize = true;
+            labelVersion.Font = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            labelVersion.Location = new Point(457, 223);
+            labelVersion.Name = "labelVersion";
+            labelVersion.Size = new Size(43, 17);
+            labelVersion.TabIndex = 11;
+            labelVersion.Text = "v1.0.0";
+            // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(511, 232);
+            ClientSize = new Size(511, 243);
+            Controls.Add(labelVersion);
             Controls.Add(panel2);
             Controls.Add(panel1);
             Font = new Font("Calibri", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -278,6 +290,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -299,5 +312,6 @@
         private Label labelResult;
         private Button buttonHelp;
         private Label labelInvalidTime;
+        private Label labelVersion;
     }
 }
