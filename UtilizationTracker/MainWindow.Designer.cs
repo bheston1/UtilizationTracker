@@ -39,9 +39,10 @@
             labelShift = new Label();
             checkBoxLunch = new CheckBox();
             panel1 = new Panel();
-            labelPercent = new Label();
             labelInvalidTime = new Label();
+            labelPercent = new Label();
             panel2 = new Panel();
+            label1 = new Label();
             buttonHelp = new Button();
             labelOverDiff = new Label();
             labelResult = new Label();
@@ -167,7 +168,6 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
-            panel1.Controls.Add(labelPercent);
             panel1.Controls.Add(labelInvalidTime);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(textBoxTimeInput);
@@ -178,18 +178,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(302, 208);
             panel1.TabIndex = 9;
-            // 
-            // labelPercent
-            // 
-            labelPercent.BorderStyle = BorderStyle.FixedSingle;
-            labelPercent.Font = new Font("Calibri", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPercent.ForeColor = Color.Red;
-            labelPercent.Location = new Point(192, 94);
-            labelPercent.Name = "labelPercent";
-            labelPercent.Size = new Size(70, 40);
-            labelPercent.TabIndex = 13;
-            labelPercent.Text = "XX%";
-            labelPercent.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelInvalidTime
             // 
@@ -202,9 +190,21 @@
             labelInvalidTime.Text = "Invalid time";
             labelInvalidTime.Visible = false;
             // 
+            // labelPercent
+            // 
+            labelPercent.Font = new Font("Calibri", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelPercent.ForeColor = Color.Red;
+            labelPercent.Location = new Point(3, 180);
+            labelPercent.Name = "labelPercent";
+            labelPercent.Size = new Size(70, 23);
+            labelPercent.TabIndex = 13;
+            labelPercent.Text = "XX%";
+            // 
             // panel2
             // 
             panel2.BorderStyle = BorderStyle.FixedSingle;
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(labelPercent);
             panel2.Controls.Add(buttonHelp);
             panel2.Controls.Add(labelOverDiff);
             panel2.Controls.Add(labelResult);
@@ -217,6 +217,16 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(179, 208);
             panel2.TabIndex = 10;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Calibri", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(3, 157);
+            label1.Name = "label1";
+            label1.Size = new Size(114, 23);
+            label1.TabIndex = 14;
+            label1.Text = "Utilization %:";
             // 
             // buttonHelp
             // 
@@ -235,7 +245,7 @@
             labelOverDiff.AutoSize = true;
             labelOverDiff.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             labelOverDiff.ForeColor = Color.Green;
-            labelOverDiff.Location = new Point(3, 173);
+            labelOverDiff.Location = new Point(3, 125);
             labelOverDiff.Name = "labelOverDiff";
             labelOverDiff.Size = new Size(45, 19);
             labelOverDiff.TabIndex = 12;
@@ -246,7 +256,7 @@
             // 
             labelResult.AutoSize = true;
             labelResult.Font = new Font("Calibri", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelResult.Location = new Point(3, 140);
+            labelResult.Location = new Point(3, 106);
             labelResult.Name = "labelResult";
             labelResult.Size = new Size(151, 19);
             labelResult.TabIndex = 11;
@@ -255,7 +265,7 @@
             // labelTotal
             // 
             labelTotal.AutoSize = true;
-            labelTotal.Location = new Point(4, 96);
+            labelTotal.Location = new Point(3, 87);
             labelTotal.Name = "labelTotal";
             labelTotal.Size = new Size(127, 19);
             labelTotal.TabIndex = 10;
@@ -278,14 +288,14 @@
             labelVersion.Name = "labelVersion";
             labelVersion.Size = new Size(43, 17);
             labelVersion.TabIndex = 11;
-            labelVersion.Text = "v1.0.1";
+            labelVersion.Text = "v1.1.0";
             labelVersion.TextAlign = ContentAlignment.MiddleRight;
             // 
             // MainWindow
             // 
             AutoScaleDimensions = new SizeF(8F, 19F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(511, 243);
+            ClientSize = new Size(511, 245);
             Controls.Add(labelVersion);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -329,5 +339,6 @@
         private Label labelInvalidTime;
         private Label labelVersion;
         private Label labelPercent;
+        private Label label1;
     }
 }
