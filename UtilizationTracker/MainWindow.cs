@@ -25,8 +25,20 @@ namespace UtilizationTracker
                 total += time;
             }
 
+            double utilPercent = Math.Round(total / (shiftLength - 0.5), 2);
+
             labelGoal.Text = $"Goal: {goal}";
             labelTotal.Text = $"Current total: {Math.Round(total, 2)}";
+            labelPercent.Text = String.Format("{0:P0}", utilPercent);
+
+            if (utilPercent >= 0.75)
+            {
+                labelPercent.ForeColor = Color.Green;
+            }
+            else
+            {
+                labelPercent.ForeColor = Color.Red;
+            }
 
             if (total >= goal)
             {

@@ -39,6 +39,7 @@
             labelShift = new Label();
             checkBoxLunch = new CheckBox();
             panel1 = new Panel();
+            labelPercent = new Label();
             labelInvalidTime = new Label();
             panel2 = new Panel();
             buttonHelp = new Button();
@@ -166,6 +167,7 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(labelPercent);
             panel1.Controls.Add(labelInvalidTime);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(textBoxTimeInput);
@@ -176,6 +178,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(302, 208);
             panel1.TabIndex = 9;
+            // 
+            // labelPercent
+            // 
+            labelPercent.BorderStyle = BorderStyle.FixedSingle;
+            labelPercent.Font = new Font("Calibri", 20F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelPercent.ForeColor = Color.Red;
+            labelPercent.Location = new Point(192, 94);
+            labelPercent.Name = "labelPercent";
+            labelPercent.Size = new Size(70, 40);
+            labelPercent.TabIndex = 13;
+            labelPercent.Text = "XX%";
+            labelPercent.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // labelInvalidTime
             // 
@@ -260,11 +274,12 @@
             // 
             labelVersion.AutoSize = true;
             labelVersion.Font = new Font("Calibri", 10F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            labelVersion.Location = new Point(457, 223);
+            labelVersion.Location = new Point(456, 223);
             labelVersion.Name = "labelVersion";
             labelVersion.Size = new Size(43, 17);
             labelVersion.TabIndex = 11;
-            labelVersion.Text = "v1.0.0";
+            labelVersion.Text = "v1.0.1";
+            labelVersion.TextAlign = ContentAlignment.MiddleRight;
             // 
             // MainWindow
             // 
@@ -313,5 +328,6 @@
         private Button buttonHelp;
         private Label labelInvalidTime;
         private Label labelVersion;
+        private Label labelPercent;
     }
 }

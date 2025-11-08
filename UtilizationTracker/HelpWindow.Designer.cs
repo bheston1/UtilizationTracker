@@ -45,11 +45,12 @@
             // 
             // buttonClose
             // 
+            buttonClose.Cursor = Cursors.Hand;
             buttonClose.Location = new Point(215, 132);
             buttonClose.Name = "buttonClose";
             buttonClose.Size = new Size(75, 27);
             buttonClose.TabIndex = 1;
-            buttonClose.Text = "Ok";
+            buttonClose.Text = "OK";
             buttonClose.UseVisualStyleBackColor = true;
             buttonClose.Click += buttonClose_Click;
             // 
