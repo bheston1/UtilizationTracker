@@ -1,3 +1,3 @@
 # UtilizationTracker
 Glorified calculator<br>
-![Preview image](https://iili.io/KDefkE7.png)
+![Preview image](https://iili.io/Kb9AEMl.png)
